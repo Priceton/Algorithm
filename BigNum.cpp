@@ -11,6 +11,7 @@ char str1[N], str2[N];
 int num1[N], num2[N];	//number input
 int num3[N+1], num4[N*2];	//store the result
 
+//Default num1, num2 >= 0
 void add(int num1[], int num2[], int num3[])
 {
 	for(int i=0; i<N+1; ++i)
@@ -25,6 +26,7 @@ void add(int num1[], int num2[], int num3[])
 	}
 }
 
+//Default num1 >= num2 >=0
 void subtract(int num1[], int num2[], int num3[])
 {
 	for(int i=0; i<N+1; ++i)
@@ -39,6 +41,7 @@ void subtract(int num1[], int num2[], int num3[])
 	}
 }
 
+//Default num1 , num2 >= 0
 void multiple(int num1[], int num2[], int num4[])
 {
 	for(int i=0; i<N*2; ++i)
