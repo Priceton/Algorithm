@@ -65,6 +65,31 @@ void Quick_Sort(int *A, int low, int high){
 	}
 }
 
+void QuickSort(int *A, int low, int high){
+	if(A == NULL) return;
+	stack<int> stk;
+	if(low<high){
+		stk.push(low);
+		stk.push(high);
+		while(!stk.empty()){
+			int h = stk.top();
+			stk.pop();
+			int l = stk.top();
+			stk.pop();
+			int m = Partition(A, l, h);
+			if(l<m){
+				stk.push(l);
+				stk.push(m-1);
+			}
+			if(m<h){
+				stk.push(m+1);
+				stk.push(e);
+			}
+		}
+	}
+}
+
+
 //Get the kth Smallest num in A.
 int Get_kth_small(int *A, int start, int end, int k){
 	if(A == NULL || start + k < end) return -1;
